@@ -1,0 +1,25 @@
+name: Python application
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout code
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'  # Specify the Python version you want to use
+
+    - name: Install dependencies
+      run: |
+        make install  # This command will run `make install`, which installs dependencies
+
+    - name: Run application
+      run: |
+        make run  # This command will run your application
+        sleep 10  # Give the server time to start (adjust if necessary)
