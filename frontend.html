@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>LSA Search Engine</title>
+</head>
+<body>
+    <h1>LSA Document Search</h1>
+    <input type="text" id="query" placeholder="Enter your query">
+    <button onclick="search()">Search</button>
+    <div id="results"></div>
+    <div id="chart"></div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
